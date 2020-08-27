@@ -54,8 +54,7 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
   successRedirect: '/',
-  failureRedirect: '/login',
-  failureFlash: true
+  failureRedirect: '/login', failureFlash: true
 }))
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
