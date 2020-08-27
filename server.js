@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
+/*if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
@@ -95,8 +95,14 @@ function checkNotAuthenticated(req, res, next) {
     return res.redirect('/')
   }
   next()
-}
-
+}*/
+const express = require('express')
+const app = express()
+const path = require('path')
+app.use('/',(req,res)=>{
+  var duongDanFile = path.join(__dirname,'home.html')
+  res.sendFile(duongDanFile)
+})
 app.listen(process.env.PORT,()=>{
   console.log('server start')
 })
