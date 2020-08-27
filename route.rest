@@ -1,0 +1,28 @@
+GET http://localhost:3500/subscribers
+
+
+###
+
+GET http://localhost:3500/subscribers/5f46878f7fa2212ef41aaed4
+
+###
+POST  http://localhost:3500/subscribers
+Content-Type: application/json
+
+
+{
+    "name": "Amazing Person",
+    "subscribedToChannel": "Web Dev Simplified"
+}
+
+###
+DELETE  http://localhost:3500/subscribers/5f46878f7fa2212ef41aaed4
+
+
+###
+PATCH  http://localhost:3500/subscribers/5f46893ba3e82b2fdc9c679d
+Content-Type:  application/json
+
+{
+    "name": "tuyen"
+}
