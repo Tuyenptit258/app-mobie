@@ -98,6 +98,6 @@ function checkNotAuthenticated(req, res, next) {
   next()
 }
 
-app.listen(3500,()=>{
+app.listen(process.env.PORT,()=>{
   console.log('server start')
 })
